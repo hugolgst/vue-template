@@ -14,27 +14,23 @@
       w="100%"
       max-width="48rem"
     >
-      <chakra.p>
+      <CText>
         Example repository of <CCode>Next.js</CCode> + <CCode>ChakraUI</CCode> + <CCode>TypeScript</CCode>.
-      </chakra.p>
+      </CText>
 
       <CList
         spacing="3"
         my="0"
       >
-        <CListItem>
-          <CListIcon
-            name="check-circle"
-            color="green.500"
-          />
-          <CLink
-            href="https://vue.chakra-ui.com/"
-            flex-grow="1"
-            mr="2"
-          >
-            ChakraUI
-          </CLink>
-        </CListItem>
+        <Link
+          name="ChakraUI"
+          href="https://vue.chakra-ui.com"
+        />
+
+        <Link
+          name="TypeScript (TS)"
+          href="https://www.typescriptlang.org/"
+        />
       </CList>
     </CStack>
   </CFlex>
@@ -44,10 +40,11 @@
   import { Options, Vue } from 'vue-class-component'
   import { CFlex, CStack, CText, CCode, CList, CListItem, CListIcon, CLink } from '@chakra-ui/vue-next'
   import Hero from '@/components/Hero.vue' // @ is an alias to /src
+  import Link from '@/components/Link.vue'
 
   @Options({
     components: {
-      CFlex, CStack, CText, CCode, CList, CListItem, CListIcon, CLink, Hero
+      CFlex, CStack, CText, CCode, CList, CListItem, CListIcon, CLink, Hero, Link
     }
   })
   export default class Home extends Vue {}
