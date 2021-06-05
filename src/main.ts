@@ -2,10 +2,10 @@ import './registerServiceWorker'
 
 import ChakraUIVuePlugin, { chakra } from '@chakra-ui/vue-next'
 
-import App from './App.vue'
+import App from '@/App.vue'
 import { createApp } from 'vue'
 import { domElements } from '@chakra-ui/vue-system'
-import router from './router'
+import router from '@/router'
 
 const app = createApp(App)
   .use(router)
